@@ -1,0 +1,29 @@
+:root{
+    --color-bg-1:#EFEFEF ;
+    --color-bg-2:#3a6ba0;
+}
+
+body{
+    box-sizing: border-box;
+}
+.conteiner{
+    background-color: var(--color-bg-1);
+
+    height: 100%;
+}
+header{
+    width: 20%;
+}
+main{
+    width: 80%;
+    background-color: var(--color-bg-2);
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+hr{
+    width: 180px;
+    height: 4px;
+}
