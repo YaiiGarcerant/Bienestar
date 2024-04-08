@@ -10,20 +10,21 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <div class="d-flex conteiner w-100 h-100 position-absolute">
-        <header class="h-100  d-grid" >
-            <div class="container position-relative w-auto h-25 align-content-center d-flex flex-column mt-4 gap-5">
-                <img src="/senalogo.svg" alt="" class="" >
-                <div class="w-100 d-flex flex-column gap-4  justify-center align-items-center">
+    <div class="d-flex conteiner w-100  position-absolute">
+        <header id="header" class="h-100 ocultar" >
+            <div class="container-header  w-auto h-25 align-content-center d-flex flex-column gap-5">
+                <img src="/senalogo.svg" class="logosena"  alt="" class="" >
+                <div class="container-link d-flex flex-column gap-4  justify-center align-items-center">
                      <a href=""><i class="bi bi-person-fill"></i> Administrador</a>
-                    <a href="">Reporte</a>
+                    <a href=""> <i class="bi bi-bar-chart-fill"></i>Reporte</a>
                     <hr>
-                    <a href="">PE-04</a>
-                    <a href="">Encuesta</a>
-                    <a href="">CRUD</a>
-                    <a href="">Seguimiento</a>
+                   
+                    <a href=""><i class="bi bi-file-earmark"></i>PE-04</a>
+                    <a href=""><i class="bi bi-person-square"></i>Encuesta</a>
+                    <a href=""><i class="bi bi-display"></i>CRUD</a>
+                    <a href=""><i class="bi bi-stack"></i>Seguimiento</a>
                     <hr>
-                    <a href="">Cerrar sesion</a>
+                    <a href=""><i class="bi bi-door-closed"></i>Cerrar sesion</a>
                 </div>
 
 
@@ -31,9 +32,17 @@
 
 
         </header>
-        <main class=" main h-100  rounded-3 d-grid">
+        <main class=" main h-100  rounded-3 ">
 
-            @yield('content')
+            <nav>
+                <p>Bienestar</p>
+                <i id="abrir" class="bi bi-list"></i>
+            </nav>
+
+            <div class="contenido">
+                @yield('content')
+            </div>
+          
             {{-- <section class="d-inline-flex p-2">
 
             </section>
@@ -43,6 +52,7 @@
         </main>
     </div>
 
-
+    <script src="{{ asset('js/main.js') }}"></script>
+    
 </body>
 </html>
